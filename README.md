@@ -1,118 +1,125 @@
-# 🕵🧰 AgentGrunt (with mods)
+# 🎼 This Project Has Evolved → AgentOrchestrator
 
-> This is a fork of the original [AgentGrunt](https://github.com/nikvdp/agentgrunt) with added branch selection features. You can now bundle specific branches, multiple branches, or all branches from a repository.
+## 🚀 **New Repository: [AgentOrchestrator (AGOR)](https://github.com/jeremiah-k/agor)**
 
-Use OpenAI's [Code Interpreter](https://openai.com/blog/chatgpt-plugins#code-interpreter) to edit and commit code across your entire git repo (even non-python repos)!
+**This enhanced fork has graduated to its own repository with a new identity!**
 
-## Overview
+### 📍 **Find the Latest Version Here:**
+**🔗 https://github.com/jeremiah-k/agor**
 
-AgentGrunt packs up the following: a codebase you specify, a specially prepared `git` binary that runs well in Code Interpreter's environment, and some prompts and code exploration tools into a single file that you can load into Code Interpreter.
+---
 
-Upload the archive, paste in a two sentence prompt, wait a bit, and then sit back and relax while GPT4.5 writes, edit, and commits your code for you. Once GPT has finished making your changes, press `d` from the hotkey menu and ChatGPT will send you a file you can use to apply the commits GPT made (with all their metadata!) directly into your copy of the repo.
+## 🎯 **What AgentOrchestrator Offers**
 
-## Features
+This fork has been completely transformed into **AgentOrchestrator** - a comprehensive multi-agent development coordination platform that goes far beyond the original AgentGrunt concept:
 
-- automatically installs `git` into Code Interpreter and configures it for code exploration
-- built in hotkey menu for easy usage
-- simple, small, and easy to customize.
+### ✨ **New Capabilities:**
+- **🎼 Multi-Agent Coordination** - Design and orchestrate teams of specialized AI agents
+- **📋 Strategic Project Planning** - Break down complex projects with dependency mapping
+- **🎯 Advanced Prompt Engineering** - Generate specialized prompts for different agent roles
+- **🔄 Dual Deployment Modes** - Bundle mode + standalone mode for maximum flexibility
+- **⚡ Quality Assurance Integration** - Built-in validation checkpoints and review processes
+- **🛡️ Risk Assessment** - Comprehensive risk planning and mitigation strategies
 
-## Installation
+### 🎼 **The Orchestration Metaphor**
+Like a conductor leading a symphony orchestra, AgentOrchestrator coordinates multiple AI agents, each with specialized skills, to create harmonious development workflows.
 
-### Prerequisites
+---
 
-- a valid ChatGPT Plus subscription and Code Interpreter enabled in ChatGPT's settings
-- a working installation of python 3.9 (or newer)
-- a git repository that you'd like Code Interpreter to work on with you
+## 🚀 **Get Started with AgentOrchestrator**
 
-Once you have those in place, run these to install:
-
-```shell
-git clone https://github.com/jeremiah-k/agentgrunt.git
-cd agentgrunt
+### **Quick Installation:**
+```bash
+# Install from the new repository
+git clone https://github.com/jeremiah-k/agor.git
+cd agor
 pipx install .
+
+# Create your first orchestrated bundle
+agor bundle /path/to/your/project
 ```
 
-If all goes well running `agentgrunt --help` will output something like this:
+### **Two Deployment Modes:**
+1. **Bundle Mode** - Upload to any AI platform (ChatGPT, Claude, etc.)
+2. **Standalone Mode** - AI agents clone the repository directly
 
-```text
-Usage: agentgrunt [OPTIONS] COMMAND [ARGS]...
+### **20+ Coordination Commands:**
+From strategic planning (`sp`) to team creation (`ct`) to prompt generation (`gp`) - everything you need to orchestrate complex development projects.
 
-Options:
-  --help  Show this message and exit.
+---
 
-Commands:
-  bundle               Bundle up a local or remote git repo
-  custom-instructions  Copy ChatGPT custom instructions to the clipboard
-```
+## 🙏 **Acknowledgments**
 
-## Usage
+### **Original AgentGrunt Foundation**
+This project builds upon the innovative foundation created by **nikvdp** in the original [AgentGrunt](https://github.com/nikvdp/agentgrunt). The core concepts of code bundling, git integration, and AI instruction frameworks provided the essential groundwork that made this enhanced coordination platform possible.
 
-To start editing a repo with `agentgrunt` use `agentgrunt`'s `bundle` command:
+**Key original contributions:**
+- Innovative "zip bomb" approach for AI code analysis
+- Git binary integration for Code Interpreter
+- Basic AI instruction framework
+- Code exploration tools foundation
 
-```shell
-# Bundle the default branch (current branch for local repos)
-agentgrunt bundle <path-to-your-repo>
+### **AgentOrchestrator Evolution**
+The transformation into AgentOrchestrator represents a significant evolution:
+- Multi-agent coordination capabilities
+- Strategic project planning frameworks
+- Advanced prompt engineering tools
+- Quality assurance and validation systems
+- Dual deployment mode support
 
-# Bundle a specific branch
-agentgrunt bundle <path-to-your-repo> --branch <branch-name>
+**We're grateful for the innovative foundation that made this comprehensive coordination platform possible.**
 
-# Bundle multiple specific branches
-agentgrunt bundle <path-to-your-repo> --branches branch1,branch2,branch3
+## 📖 **Documentation & Resources**
 
-# Bundle all branches
-agentgrunt bundle <path-to-your-repo> --all-branches
-```
+**Visit the new repository for complete documentation:**
+- **🏠 Main Repository**: https://github.com/jeremiah-k/agor
+- **📚 Comprehensive README**: Full feature documentation and examples
+- **🚀 Quick Start Guide**: Get up and running in minutes
+- **🎯 Use Cases**: Real-world examples and workflows
+- **🔧 API Reference**: Complete tool and command documentation
 
-It will do some work and then print out some instructions. When the process has completed you'll have a new file called `<your-repo-name>.tar.gz` in your current folder.
+---
 
-By default, AgentGrunt bundles only the current branch (for local repos) or the default branch (for remote repos). You can use the branch options to include specific branches or all branches in the bundle, which can be useful when you need to work with multiple branches or want to perform operations across branches.
+## 🔄 **Migration Information**
 
-Now do the following:
+### **For Existing Users:**
+If you've been using this enhanced fork:
+1. **Switch to the new repository**: https://github.com/jeremiah-k/agor
+2. **Update your bookmarks** and documentation
+3. **Install from new location**: `git clone https://github.com/jeremiah-k/agor.git`
+4. **Enjoy enhanced features** and ongoing development
 
-- Copy the short prompt `agentgrunt` prints out to the clipboard (or just say `y` when prompted if on macOS)
-- Open up ChatGPT and start a new chat in Code Interpreter mode
-- Use the + button to upload the `<your-repo-name>.tar.gz` file AgentGrunt generated
-- Paste the prompt you copied a second ago into the chatbox and press send
+### **Backward Compatibility:**
+- The `agentgrunt` command still works in the new repository
+- All existing bundles and workflows remain functional
+- Enhanced with new `agor` command and capabilities
 
-You'll see ChatGPT start to do some work, and after a few moments you'll be greeted with a message saying "Code Interpreter is now running AgentGrunt!" followed by a hotkey menu similar to the below:
+### **Why the Move?**
+- **Clear identity** for the enhanced coordination platform
+- **Professional branding** suitable for enterprise use
+- **Focused development** on multi-agent coordination features
+- **Better discoverability** for users seeking orchestration tools
 
-```text
-a ) analyze codebase
-c ) continue
-d ) download changes as patch
-dr) download entire repo
-m ) show diff of last change
-r ) refresh/reload agentgrunt
-w ) work autonomously until complete
-? ) show this hotkey list
-```
+---
 
-Now just ask Code Interpreter to make some changes to your repo, and hit `d` when you're finished to download the changes it made to your local copy of the repo!
+## 🎯 **What's Next?**
 
-When you want to download the changes you've made to your local copy of the repo, hit `d` and Code Interpreter will send you a `.patch` file that you can apply to your copy of the git repo using the (somewhat esoteric) `git am` command:
+**👉 Head over to [AgentOrchestrator](https://github.com/jeremiah-k/agor) to:**
+- Explore the comprehensive multi-agent coordination features
+- Try the new dual deployment modes
+- Access 20+ specialized coordination commands
+- Join the community building the future of AI development orchestration
 
-```shell
-git am <path-to-patch-file>
-```
+**🚀 The future of coordinated AI development is here - and it's called AgentOrchestrator!**
 
-## How it works
+---
 
-When you ask AgentGrunt to generate a bundle it first downloads a single-file version of the `git` binary from 1bin.org (an older project of mine to make easy to deploy single file binaries of common utilities). Then it clones the repo you point it at into a temporary location location (to avoid bundling up any files that aren't part of the repo, eg `node_modules` folders), copies the `git` binary and some prompts teaching Code Interpreter how to use AgentGrunt's tools into a temp folder and then builds a tarball out of the whole collection.
+## 📜 **Repository History**
 
-The python package contains a [`gpt_tools`](agentgrunt/gpt_tools) folder that gets copied into each bundle AgentGrunt generates. `gpt_tools` includes a prompt for Code Interpreter in the [`README_ai.md`](agentgrunt/gpt_tools/README_ai.md) file, as well as some python functions that are useful for code exploration that Code Interpreter can load and call directly (see [`code_exploration.py`](agentgrunt/gpt_tools/code_exploration.py)).
+**This repository served as the development space for transforming AgentGrunt into AgentOrchestrator.**
 
-This arrangement allows the prompt the user has to paste into ChatGPT to be short and simple. Code Interpreter itself can then extract the longer prompt from README_ai and bootstrap itself from there.
+- **Original AgentGrunt**: Created by nikvdp - innovative code bundling for AI assistants
+- **Enhanced Fork**: Multi-agent coordination capabilities added
+- **AgentOrchestrator**: Graduated to its own repository with professional identity
 
-## Caveats and gotchas
-
-- GPT4 makes a lot of mistakes and is easily confused! While AgentGrunt can be genuinely useful, it's not going to be replacing a human dev any time soon. Expect it to require a fair bit of babysitting and handholding to be able to accomplish meaningful tasks.
-- During longer conversations GPT4 tends to forget what it's doing and sometimes stops showing the hotkey menu or that `git` and the tools from `code_exploration.py` functions are available. If this happens, hit `r` or ask it to re-read "it's" readme file to refresh its memory.
-- Code Interpreter is subject to a ~2 minute timeout while working autonomously, so for longer running operations you may need to tell it `c` (continue) to have it finish what it was doing
-- Sometimes Code Interpreter sends diff output instead of properly formatting a commit patch, especially if the changes it's made haven't been committed yet. If this happens, use `r` to refresh the prompt, or explicitly direct it to make a commit and then send a patch.
-- Code Interpreter deletes it's workspace files if it's been left idle for too long (seems to be in the ~10-15m range), and when this happens any links to files it may have sent you will stop working. **Make sure to download any patch files it sends you immediately to avoid losing your work!**
-
-## Final thoughts
-
-This is still early and more of a proof of concept than anything else. That said, even in it's current form it's often genuinely useful! Allowing Code Interpreter to read files and archives in this way also opens the door for lots of interesting applications. AgentGrunt only uses one prompt, but it's easy to imagine more complex tools like this that include a catalogue of prompts that "daisy-chain" from each other, am very curious to see what other things people build in this vein!
-
-Hattip to [@NickADobos](https://twitter.com/NickADobos)' and his "[AI zip bomb](https://twitter.com/NickADobos/status/1687938356813180928)" thread for the inspiration!
+**🔗 Continue the journey at: https://github.com/jeremiah-k/agor**
